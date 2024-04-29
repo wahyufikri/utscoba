@@ -16,7 +16,7 @@ class DetailBerita extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Detail Berita"),
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.orange,
       ),
       body: ListView(
         children: [
@@ -25,7 +25,7 @@ class DetailBerita extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.network(
-                "http://192.168.100.10/uts_mobile/image/${data?.gambar}",
+                "http://192.168.115.167/uts_mobile/image/${data?.gambar}",
                 fit: BoxFit.fill,
               ),
             ),
@@ -97,7 +97,7 @@ class _ListBeritaState extends State<ListBerita> {
     try {
       // Berhasil
       http.Response response = await http.get(
-        Uri.parse("http://192.168.100.10/uts_mobile/berita.php"),
+        Uri.parse("http://192.168.115.167/uts_mobile/berita.php"),
       );
 
       return modelBeritaFromJson(response.body).data;
@@ -113,7 +113,7 @@ class _ListBeritaState extends State<ListBerita> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Aplikasi Berita'),
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.orange,
         actions: [
           TextButton(
               onPressed: () {
@@ -205,7 +205,7 @@ class _ListBeritaState extends State<ListBerita> {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.network(
-                                        'http://192.168.100.10/uts_mobile/image/${data.gambar}',
+                                        'http://192.168.115.167/uts_mobile/image/${data.gambar}',
                                         fit: BoxFit.fill,
                                       ),
                                     )),

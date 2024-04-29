@@ -35,7 +35,7 @@ class _LoginApiState extends State<LoginApi> {
       setState(() {
         isLoading = true;
       });
-      http.Response response = await http.post(Uri.parse('http://192.168.100.10/uts_mobile/login.php'),
+      http.Response response = await http.post(Uri.parse('http://192.168.115.167/uts_mobile/login.php'),
           body: {
             "username":txtUsername.text,
             "password":txtPassword.text,
@@ -83,7 +83,7 @@ class _LoginApiState extends State<LoginApi> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.orange,
         title: Text('Form  Login'),
       ),
 

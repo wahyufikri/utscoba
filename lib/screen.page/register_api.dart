@@ -31,7 +31,7 @@ class _RegisterApiState extends State<RegisterApi> {
         isLoading = true;
       });
 
-      http.Response response = await http.post(Uri.parse('http://192.168.100.10/uts_mobile/register.php'),
+      http.Response response = await http.post(Uri.parse('http://192.168.115.167/uts_mobile/register.php'),
           body: {
             "username": txtUsername.text,
             "nama": txtNama.text,
@@ -91,7 +91,7 @@ class _RegisterApiState extends State<RegisterApi> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.orange,
         title: Text('Form  Register'),
       ),
 
